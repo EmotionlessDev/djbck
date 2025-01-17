@@ -85,10 +85,7 @@ __pycache__/
 local_settings.py
 
 .env
-db.sqlite3
 __*__
-migrations
 .idea/
-media
 *.rdb
 .vscode
