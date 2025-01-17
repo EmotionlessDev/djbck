@@ -27,7 +27,11 @@ SECRET_KEY = "django-insecure-s_(5(7x4tqvv$yl&rvz-cv+!mh!b941a-c$*+5#t8nebq0xqxk
 DEBUG = True
 
 ALLOWED_HOSTS = ["127.0.0.1", "localhost"]
-CSRF_TRUSTED_ORIGINS = ["http://127.0.0.1:8000", "http://localhost:8000"]
+CSRF_TRUSTED_ORIGINS = [
+    "http://127.0.0.1:8000",
+    "http://localhost:8000",
+    "https://backend-homework-production.up.railway.app",
+]
 
 # Application definition
 
@@ -115,7 +119,6 @@ USE_I18N = True
 USE_TZ = True
 
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
@@ -130,3 +133,4 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+PORT = int(os.getenv("PORT", 8000))
