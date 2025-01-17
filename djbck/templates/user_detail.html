@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>user detail</title>
+</head>
+
+<body>
+    <h1>User Detail</h1>
+    <p>Email: {{ user.email }}</p>
+    <p>Username: {{ user.username }}</p>
+    <p>Active: {{ user.is_active }}</p>
+    <p>Staff: {{ user.is_staff }}</p>
+    <p>Superuser: {{ user.is_superuser }}</p>
+    <a href="{% url 'edit_user' user.username %}">Edit</a>
+    <a href="{% url 'delete_user' user.username %}">Delete</a>
+</body>
+
+</html>
